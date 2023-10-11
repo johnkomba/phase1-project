@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function searchMovies(query) {
     const movieList = document.getElementById('movieList');
     movieList.innerHTML = '';
-    fetch(`http://www.omdbapi.com/?s=${query}&apikey=YOUR_API_KEY`)
+    fetch(`http://www.omdbapi.com/?s=${query}&apikey=My_API_KEY`)
     .then(response => response.json())
     .then(data => {
         if (data.Response === 'True') {
@@ -24,3 +24,7 @@ function searchMovies(query) {
             listItem.textContent = 'No movies found';
             movieList.appendChild(listItem);
         }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
