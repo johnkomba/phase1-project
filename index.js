@@ -24,6 +24,11 @@ function searchMovies(query) {
             listItem.textContent = 'No movies found';
             movieList.appendChild(listItem);
         }
+        } else {
+            const listItem = document.createElement('li');
+            listItem.textContent = 'No movies found';
+            movieList.appendChild(listItem);
+        }
     })
     .catch(error => console.error('Error:', error));
 }
