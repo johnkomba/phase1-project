@@ -6,3 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         searchMovies(searchInput);
     });
 });
+
+function searchMovies(query) {
+    const movieList = document.getElementById('movieList');
+    movieList.innerHTML = '';
