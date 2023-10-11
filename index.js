@@ -6,11 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
         searchMovies(searchInput);
     });
 });
-
 function searchMovies(query) {
     const movieList = document.getElementById('movieList');
     movieList.innerHTML = '';
-    fetch(`http://www.omdbapi.com/?s=${query}&apikey=My_API_KEY`)
+    const apiKey = 'fa82ab71';
+
+    fetch(`http://www.omdbapi.com/?s=${query}&apikey=${apiKey}`)
     .then(response => response.json())
     .then(data => {
         if (data.Response === 'True') {
@@ -19,11 +20,7 @@ function searchMovies(query) {
                 listItem.textContent = `${movie.Title} (${movie.Year})`;
                 movieList.appendChild(listItem);
             });
-        } else {
-            const listItem = document.createElement('li');
-            listItem.textContent = 'No movies found';
-            movieList.appendChild(listItem);
-        }
+            
         } else {
             const listItem = document.createElement('li');
             listItem.textContent = 'No movies found';
@@ -32,4 +29,3 @@ function searchMovies(query) {
     })
     .catch(error => console.error('Error:', error));
 }
-
