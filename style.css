@@ -43,3 +43,6 @@ ul {
 li {
     margin: 10px 0;
 }
+#likeButton {
+    display: none;
+}

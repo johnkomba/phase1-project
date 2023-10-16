@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('searchButton');
-
     searchButton.addEventListener('click', () => {
         const searchInput = document.getElementById('searchInput').value;
         searchMovies(searchInput);
+        // Show the like button after search results are displayed
+        likeButton.style.display = 'block';
     });
+});
 
     const likeButton = document.getElementById('likeButton');
 
@@ -19,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const subscriptionStatus = document.getElementById('subscriptionStatus');
         subscriptionStatus.textContent = checkbox.checked ? 'Subscribed' : 'Unsubscribed';
     });
-});
 
 function searchMovies(query) {
     const movieList = document.getElementById('movieList');
