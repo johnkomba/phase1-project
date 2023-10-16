@@ -44,4 +44,5 @@ function searchMovies(query) {
         }
     })
     .catch(error => console.error('Error:', error));
+    
 }
