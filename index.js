@@ -3,24 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     searchButton.addEventListener('click', () => {
         const searchInput = document.getElementById('searchInput').value;
         searchMovies(searchInput);
-        // Show the like button after search results are displayed
-        likeButton.style.display = 'block';
     });
 });
-
-    const likeButton = document.getElementById('likeButton');
-
-    likeButton.addEventListener('click', () => {
-        const likeCount = document.getElementById('likeCount');
-        likeCount.textContent = parseInt(likeCount.textContent) + 1;
-    });
-
-    const checkbox = document.getElementById('subscribeCheckbox');
-
-    checkbox.addEventListener('change', () => {
-        const subscriptionStatus = document.getElementById('subscriptionStatus');
-        subscriptionStatus.textContent = checkbox.checked ? 'Subscribed' : 'Unsubscribed';
-    });
 
 function searchMovies(query) {
     const movieList = document.getElementById('movieList');
@@ -43,8 +27,17 @@ function searchMovies(query) {
                             <p>Genre: ${movieDetails.Genre}</p>
                             <p>Plot: ${movieDetails.Plot}</p>
                             <img src="${movieDetails.Poster}" alt="${movieDetails.Title}">
+                            <button class="likeButton">Like</button>
+                            <span class="likeCount">0</span>
                         `;
                         movieList.appendChild(listItem);
+
+                        // Attach event listener for like button
+                        const likeButton = listItem.querySelector('.likeButton');
+                        likeButton.addEventListener('click', () => {
+                            const likeCount = listItem.querySelector('.likeCount');
+                            likeCount.textContent = parseInt(likeCount.textContent) + 1;
+                        });
                     });
             });
         } else {
