@@ -16,7 +16,6 @@ function searchMovies(query) {
     .then(data => {
         if (data.Response === 'True') {
             data.Search.forEach(movie => {
-                // Fetch additional details about the movie using its imdbID
                 fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=${apiKey}`)
                     .then(response => response.json())
                     .then(movieDetails => {
@@ -31,8 +30,6 @@ function searchMovies(query) {
                             <span class="likeCount">0</span>
                         `;
                         movieList.appendChild(listItem);
-
-                        // Attach event listener for like button
                         const likeButton = listItem.querySelector('.likeButton');
                         likeButton.addEventListener('click', () => {
                             const likeCount = listItem.querySelector('.likeCount');
