@@ -10,7 +10,7 @@
 - Guidelines for Staying Organized
 - JSON Server Instructions (Optional)
 ## Introduction
-Welcome to the Flatdango project! In this project, we'll be building a Single Page Application (SPA) for booking movie tickets. The frontend of this application will be built using HTML, CSS, JavaScript, and Bootstrap (or Tailwind), and it will interact with a public API to fetch movie information.
+Welcome to the Flatdango project! In this project, we'll be building a Single Page Application (SPA) for searching movies from a public API. The frontend of this application will be built using HTML, CSS, JavaScript, and Bootstrap (or Tailwind), and it will interact with the public API to fetch movie information.
 
 ## Project Goals
 Design and architect features across a frontend.
@@ -58,7 +58,7 @@ Create a frontend directory with basic files.
 Build enough code to get some API data.
 Continue building features one by one.
 ## JSON Server Instructions (Optional)
-If using json-server, a template is provided to generate backend code.
+If using json-server, a template is provided to generate backend code link = https://github.com/learn-co-curriculum/json-server-template
 Alternatively, create a db.json file with your desired structure.
 Run json-server --watch db.json to start the server.
 Consult the json-server docs for more information.
