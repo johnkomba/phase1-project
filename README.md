@@ -13,11 +13,11 @@
 Welcome to the Flatdango project! In this project, we'll be building a Single Page Application (SPA) for searching movies from a public API. The frontend of this application will be built using HTML, CSS, JavaScript, and Bootstrap (or Tailwind), and it will interact with the public API to fetch movie information.
 
 ## Project Goals
-Design and architect features across a frontend.
-Communicate and collaborate in a technical environment.
-Integrate JavaScript and an external API.
-Debug issues in small- to medium-sized projects.
-Build and iterate on a project MVP.
+- Design and architect features across a frontend.
+- Communicate and collaborate in a technical environment.
+- Integrate JavaScript and an external API.
+- Debug issues in small- to medium-sized projects.
+- Build and iterate on a project MVP.
 ## Project Setup
 Create a new project folder.
 Create a new GitHub repository (ensure it is private).
